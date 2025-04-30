@@ -1,0 +1,104 @@
+/* Example: Adding a media query for responsiveness */
+@media (max-width: 768px) {
+    .menu {
+        top: 50px;
+    }
+    .header-content .text {
+        display: none;
+    }
+
+    .about-container {
+        padding: 30px;
+    }
+
+    .about-container
+    .catchup {
+        width: 400px;
+        line-height: 20px;
+    }
+    .about-container
+    .catchup h3 {
+        font-size: 2rem;
+    }
+    .detail-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-container 
+    .about-image {
+        width: 500px;
+        overflow: hidden;
+    }
+    .about-container
+    .about-text {
+        gap: 10px;
+        padding: 0;
+        width: 400px;
+    }
+    .about-text h4 {
+    font-size: 1.5rem;
+    }
+    .about-text #details {
+        width: 500px;
+        gap: 20px;
+    }
+
+    .services-section {
+        padding: 30px;
+    }
+
+    .service-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .services-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-container 
+    .catchup-con {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+    .service-container 
+    .catchup-con h3 {
+        padding: 5px;
+    }
+
+    .work-section {
+        padding: 30px;
+    }
+    .work-container {
+        gap: 20px;
+    }
+    .work-container .catch-up h3 {
+        padding: 5px 0;
+    }
+    .work-images {
+        padding: 50px;
+        grid-template-columns: repeat(2, 100px);
+    }
+    .work-images img {
+        width: 150px;
+    }
+
+    .experiences-section 
+    #text {
+        width: 80%;
+        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        
+    }
+    .experiences-section
+    .button {
+        display: none;
+    }
+}
