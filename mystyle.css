@@ -571,7 +571,7 @@ button {
     width: 100%;
 
     .paragraph{
-        font-size: .700rem;
+        font-size: 1.2rem;
     }
 
 }
@@ -760,6 +760,10 @@ button:hover {
 
     button{
         padding: 14px;
+
+        a {
+            font-size: .750rem;
+        }
     }
     .avial {
         height: 30px;
@@ -805,8 +809,10 @@ button:hover {
         width: 100%;
     }
     
+    .intro-container
     .paragraph {
         width: 100%;
+
     }
     
     .h-button {
@@ -880,7 +886,10 @@ button:hover {
         flex-direction: column;
         gap: 15px;
     }
-    
+    .text-space
+    .paragraph {
+        font-size: .700rem;
+    }
     .scrolling-content .icon svg,
     .footer-icon svg {
         width: 24px;
