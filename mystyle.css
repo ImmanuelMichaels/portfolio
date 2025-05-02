@@ -46,6 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 1000;
 }
 .nav 
 .nav-links {
@@ -150,14 +151,13 @@ button {
 }
 .h-button 
 .avial {
-    width: 340px;
     height: 30px;
     background-color: rgba(47, 255, 116, 0.37);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    padding: 30px;
+    padding: 30px 30px;
     font-size: 1.2rem;
     color: green;
 }
@@ -172,15 +172,18 @@ button {
 .scrolling-container {
     position: relative;
     overflow: hidden;
-    width: 80%;
+    width: 100%;
     height: auto;
-    padding: 30px 0;
     z-index: -100;
+    margin: 30px;
 }
 
 .scrolling-track {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     white-space: nowrap;
     will-change: transform; 
@@ -342,7 +345,6 @@ button {
     transform: translateY(30px) rotate(2deg);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: calc(var(--delay) * 0.1s);
-    z-index: -1000;
 }
 .detailed.visible {
     opacity: 1;
@@ -528,7 +530,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 50px 10px;
     animation-delay: 0.5s;
 }
 .get-in-content {
@@ -566,10 +568,10 @@ button {
     flex-direction: column;
 }
 .text-space {
-    width: 80%;
+    width: 100%;
 
     .paragraph{
-        font-size: 1.2rem;
+        font-size: .700rem;
     }
 
 }
@@ -613,6 +615,7 @@ button {
         text-decoration: none;
     }
 }
+
 .footer{
     width: 100%;
     height: auto;
@@ -704,14 +707,14 @@ button {
     transform: translateY(-8px);
 }
 
-button {
+ button {
     transition: all 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
+} 
 
 /* Scrolling tech icons animation */
 .scrolling-content {
@@ -730,4 +733,332 @@ button:hover {
 /* Smooth transitions for all elements */
 * {
     transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    body {
+    background-color: #fffefe;
+    }
+    .main-container {
+        width: 85%;
+        padding: 80px;
+    }
+    
+    .nav {
+        width: 500px;
+        position: static;
+    }
+    
+    .nav-links {
+        width: 500px;
+
+        button{
+            display: none;
+        }
+    }
+
+    button{
+        padding: 14px;
+    }
+    .avial {
+        height: 30px;
+    }
+    .available {
+        font-size: 0.700rem;
+    }
+    
+    .detailed-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .detailed {
+        width: 100%;
+    }
+    
+    .inside {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-container {
+        width: 90%;
+        padding: 60px;
+    }
+    
+    .hero-container {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    
+    .intro-container {
+        padding-top: 150px;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+    
+    .sub-heading {
+        font-size: 1.8rem;
+        width: 100%;
+    }
+    
+    .paragraph {
+        width: 100%;
+    }
+    
+    .h-button {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .avial {
+       
+        justify-content: flex-start;
+    }
+    
+    .about .images {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .a-image {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .image-content {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 95%;
+        padding: 40px;
+    }
+    
+    .nav {
+        width: 90%;
+        top: 30px;
+    }
+    
+    .nav-links {
+        width: 100%;
+        height: 60px;
+    }
+    
+    .nav-links ul {
+        gap: 15px;
+        margin-right: 10px;
+    }
+    
+    .nav-links button {
+        width: 90px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+    .heading {
+        font-size: 2.2rem;
+    }
+    
+    .sub-heading {
+        font-size: 1.5rem;
+    }
+    
+    .detailed-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .scrolling-content .icon svg,
+    .footer-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .project-content .inside {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-container {
+        width: 100%;
+        padding: 30px 20px;
+        border: none;
+    }
+    
+    .nav {
+        width: 95%;
+    }
+    
+    .nav-links ul {
+        gap: 10px;
+    }
+    
+    .nav-links li svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .heading {
+        font-size: 2rem;
+    }
+    
+    .sub-heading {
+        font-size: 1.3rem;
+    }
+    
+    .paragraph {
+        font-size: 1rem;
+    }
+    
+    .h-button button {
+        width: 100%;
+    }
+    
+    .explore-button {
+        padding: 40px 0;
+    }
+    
+    .explore-button button {
+        width: 100%;
+    }
+    
+    .work-container {
+        height: auto;
+        padding: 30px 0;
+    }
+    
+    .experience {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    #year, #position {
+        width: 100%;
+    }
+    
+    .company {
+        width: 100%;
+    }
+    
+    .text-space {
+        width: 100%;
+    }
+    
+    .form-content {
+        width: 100%;
+    }
+    
+    .scrolling-container,
+    .project-scrolling-container {
+        padding: 20px 0;
+    }
+    
+    .scrolling-container::before,
+    .scrolling-container::after,
+    .project-scrolling-container::before,
+    .project-scrolling-container::after {
+        width: 50px;
+    }
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 400px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+    
+    .sub-heading {
+        font-size: 1.2rem;
+    }
+    
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .nav-links {
+        height: 50px;
+    }
+    
+    .nav-links ul {
+        gap: 8px;
+    }
+    
+    .nav-links button {
+        width: 80px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .project-content .inside {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Portrait tablet and small desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+    .detailed-content {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 576px) and (max-width: 767px) {
+    .detailed-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .a-image {
+        max-width: 400px;
+    }
+}
+
+/* Very small screens */
+@media screen and (max-width: 350px) {
+    .heading {
+        font-size: 1.6rem;
+    }
+    
+    .sub-heading {
+        font-size: 1.1rem;
+    }
+    
+    .nav-links ul {
+        gap: 5px;
+    }
+    
+    .nav-links button {
+        width: 70px;
+        font-size: 0.7rem;
+    }
 }
