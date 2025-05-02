@@ -569,11 +569,10 @@ button {
 }
 .text-space {
     width: 100%;
-
-    .paragraph{
-        font-size: 1.2rem;
-    }
-
+}
+.text-space .paragraph{
+    width: 80%;
+    font-size: 1.2rem;
 }
 .form-group {
     width: 100%;
@@ -783,6 +782,11 @@ button:hover {
     .inside {
         width: 100%;
     }
+
+    .work-content 
+    .heading {
+        font-size: .700rem;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -797,16 +801,25 @@ button:hover {
     }
     
     .intro-container {
-        padding-top: 150px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        justify-content: center;
+        align-items: center;
     }
     
+    .intro-container
     .heading {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        display: flex;
+        text-align: center;
     }
     
+    .intro-container
     .sub-heading {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         width: 100%;
+        text-align: center;
     }
     
     .intro-container
@@ -841,6 +854,14 @@ button:hover {
         width: 100%;
         border-radius: 20px;
     }
+    .work-content 
+    .heading {
+        font-size: 1.1rem;
+    }
+    .projects-content
+    .heading {
+        font-size: 1.1rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -850,7 +871,7 @@ button:hover {
     }
     
     .nav {
-        width: 90%;
+        width: 100%;
         top: 30px;
     }
     
@@ -888,7 +909,7 @@ button:hover {
     }
     .text-space
     .paragraph {
-        font-size: .700rem;
+        font-size: 1rem;
     }
     .scrolling-content .icon svg,
     .footer-icon svg {
