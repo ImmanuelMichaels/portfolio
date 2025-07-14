@@ -262,8 +262,8 @@ button {
     margin: 50px 0;
 }
 .a-image {
-    width: 300px;
-    height: 350px;
+    width: auto;
+    height: auto;
     background-color: whitesmoke;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
@@ -875,7 +875,7 @@ button:hover {
     }
     
     .a-image {
-        width: 100%;
+        width: auto;
         margin-bottom: 20px;
         display: flex;
         align-items: center;
