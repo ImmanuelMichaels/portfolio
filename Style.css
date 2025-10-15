@@ -289,14 +289,14 @@ button {
     transform: rotate(15deg);
 } 
 #first {
-    background-image: url(./images/12.jpg);
+    background-image: url(./images/addit.jpg);
     animation: rotate-left 15s infinite linear;
 } 
 #first:hover {
     transform: rotate(-5deg);
 }
 #second {
-    background-image: url(./images/11.jpg);
+    background-image: url(./images/additt.jpg);
     animation: rotate-right 15s infinite linear;
 } 
 #second:hover {
